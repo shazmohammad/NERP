@@ -21,6 +21,11 @@ class BookController extends Controller
         return view('books.bookadd');
     }
 
+    public function index()
+    {
+        return view('index');
+    }
+
     public function save(Request $request)
     {        
        
