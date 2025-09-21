@@ -19,7 +19,7 @@
                          </span><span class="pc-mtext">Accounts</span><span class="pc-arrow"><i
                                  class="ti ti-chevron-right"></i></span></a>
                      <ul class="pc-submenu">
-                         <li class="pc-item"><a class="pc-link" href="#!">Customer</a></li>
+                         <li class="pc-item"><a class="pc-link" href="{{ route('customer.list') }}">Customer</a></li>
                          <li class="pc-item"><a class="pc-link" href="#!">Supplier</a></li>
                          <li class="pc-item"><a class="pc-link" href="#!">Bank</a></li>
                          <li class="pc-item"><a class="pc-link" href="#!">Chart Of Accounts</a></li>

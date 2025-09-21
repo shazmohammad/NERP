@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\master\accounts\CustomerController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\books\BookController;
 
@@ -37,14 +38,14 @@ Route::get('/', function () {
    
         Route::prefix('master')->group(function () {
         Route::prefix('customer')->group(function () {
-        Route::controller(BookController::class)->group(function () {
+        Route::controller(CustomerController::class)->group(function () {
             // Route::prefix('country')->group(function () {
-                Route::get('/', 'show')->name('booklist');
-                Route::get('/add', 'add')->name('bookadd');
-                Route::post('/add', 'save')->name('bookadd');
-                Route::get('edit/{id}', 'view')->name('bookedit');
-                Route::post('edit/{id}', 'update')->name('bookedit');
-                Route::get('/report', 'printall')->name('bookprint');
+                Route::get('/', 'show')->name('customer.list');
+                // Route::get('/add', 'add')->name('bookadd');
+                // Route::post('/add', 'save')->name('bookadd');
+                Route::get('edit/{id}', 'view')->name('customer.edit');
+                // Route::post('edit/{id}', 'update')->name('bookedit');
+                // Route::get('/report', 'printall')->name('bookprint');
             // });
         });
 
