@@ -41,7 +41,7 @@ Route::get('/', function () {
         Route::controller(CustomerController::class)->group(function () {
             // Route::prefix('country')->group(function () {
                 Route::get('/', 'show')->name('customer.list');
-                // Route::get('/add', 'add')->name('bookadd');
+                Route::get('/add', 'add')->name('customer.add');
                 // Route::post('/add', 'save')->name('bookadd');
                 Route::get('edit/{id}', 'view')->name('customer.edit');
                 // Route::post('edit/{id}', 'update')->name('bookedit');

@@ -6,19 +6,20 @@
         <div class="page-header">
           <div class="page-block">
             <div class="page-header-title">
-              <h5 class="mb-0 font-medium">Default</h5>
+              <h5 class="mb-0 font-medium">Customer Master</h5>
             </div>
             <ul class="breadcrumb">
               <li class="breadcrumb-item"><a href="../dashboard/index.html">Master</a></li>
               <li class="breadcrumb-item"><a href="javascript: void(0)">Accounts</a></li>
               <li class="breadcrumb-item" aria-current="page">Customers</li>
             </ul>
+            <div class="button"> <a href="#!"> Add Customer </a></div>
           </div>
         </div>
         <!-- [ breadcrumb ] end -->
 
         <!-- [ Main Content ] start -->
-        <div class="grid grid-cols-12 gap-x-6">
+        <div class="grid  ">
        <table>
         <thead>
           <th>ID</th>
@@ -28,7 +29,7 @@
           <th>Address</th>
           <th>Arabic Address</th>
           <th>Mobile No</th>
-          <th>Action</th>
+          <th><a href="{{ route('customer.add') }}">Add Customer</a></th>
         </thead>
         <tbody>
           @foreach ($cust as $customer )

@@ -10,16 +10,21 @@ use App\Models\customer;
 class CustomerController extends Controller
 {
     //
-        public function show()
+    public function show()
     {
-        $cust = customer::get(); 
-        return view('masters.accounts.customer',['cust' => $cust]);
+        $cust = customer::get();
+        return view('masters.accounts.customer.list', ['cust' => $cust]);
     }
 
-    
-    public function view($id){
+
+    public function view($id)
+    {
         $book = customer::find($id);
-        return view('masters.accounts.customer',['cust' => $book]);
+        return view('masters.accounts.customer.list', ['cust' => $book]);
     }
 
+    public function add()
+    {
+        return view('masters.accounts.customer.add');
+    }
 }
