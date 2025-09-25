@@ -1,165 +1,44 @@
- <!-- [ Sidebar Menu ] start -->
- <nav class="pc-sidebar">
-     <div class="navbar-wrapper">
-         <div class="m-header flex items-center py-4 px-6 h-header-height">
-             <a href="{{ route('index') }}" class="b-brand flex items-center gap-3">
-                 <!-- ========   Change your logo from here   ============ -->
-                 <img src="{{asset('assets/images/logo-white.svg')}}" class="img-fluid logo logo-lg" alt="logo" />
-                 <img src="{{asset('assets/images/favicon.svg')}}" class="img-fluid logo logo-sm" alt="logo" />
-             </a>
-         </div>
-         <div class="navbar-content h-[calc(100vh_-_74px)] py-2.5">
-             <ul class="pc-navbar">
 
-                 <li class="pc-item pc-caption">
-                     <label>Masters</label>
-                 </li>
-                 <li class="pc-item pc-hasmenu">
-                     <a href="#!" class="pc-link"><span class="pc-micon"> <i data-feather="user-check"></i>
-                         </span><span class="pc-mtext">Accounts</span><span class="pc-arrow"><i
-                                 class="ti ti-chevron-right"></i></span></a>
-                     <ul class="pc-submenu">
-                         <li class="pc-item"><a class="pc-link" href="{{ route('customer.list') }}">Customer</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Supplier</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Bank</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Chart Of Accounts</a></li>
-                     </ul>
-                 </li>
-
-                 <li class="pc-item pc-hasmenu">
-                     <a href="#!" class="pc-link"><span class="pc-micon"> <i data-feather="box"></i>
-                         </span><span class="pc-mtext">Stocks</span><span class="pc-arrow"><i
-                                 class="ti ti-chevron-right"></i></span></a>
-                     <ul class="pc-submenu">
-                         <li class="pc-item"><a class="pc-link" href="#!">Category</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">SubCategory</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Stocks</a></li>
-                     </ul>
-                 </li>
-                 
-                 <li class="pc-item pc-hasmenu">
-                     <a href="#!" class="pc-link"><span class="pc-micon"> <i data-feather="grid"></i>
-                         </span><span class="pc-mtext">Common</span><span class="pc-arrow"><i
-                                 class="ti ti-chevron-right"></i></span></a>
-                     <ul class="pc-submenu">
-                         <li class="pc-item"><a class="pc-link" href="#!">VAT Master</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Unit Master</a></li>
-                     </ul>
-                 </li>
-
-                 <li class="pc-item pc-caption">
-                     <label>Documents</label>
-                     <i data-feather="feather"></i>
-                 </li>
-               
-                 <li class="pc-item pc-hasmenu">
-                     <a href="#!" class="pc-link"><span class="pc-micon"> <i data-feather="airplay"></i>
-                         </span><span class="pc-mtext">Sales</span><span class="pc-arrow"><i
-                                 class="ti ti-chevron-right"></i></span></a>
-                     <ul class="pc-submenu">
-                         <li class="pc-item"><a class="pc-link" href="#!">Credit Sales</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Cash Sales</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Credit Sale Return</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Cash Sale Return</a></li>
-                     </ul>
-                 </li>
-
-                 <li class="pc-item pc-hasmenu">
-                     <a href="#!" class="pc-link"><span class="pc-micon"> <i data-feather="shopping-cart"></i>
-                         </span><span class="pc-mtext">Purchase</span><span class="pc-arrow"><i
-                                 class="ti ti-chevron-right"></i></span></a>
-                     <ul class="pc-submenu">
-                         <li class="pc-item"><a class="pc-link" href="#!">Credit Purchase</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Cash Purchase</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Credit Purchase Return</a></li>
-                         <li class="pc-item"><a class="pc-link" href="#!">Cash Purchase Return</a></li>
-                     </ul>
-                 </li>
-
-                 <li class="pc-item pc-hasmenu">
-                     <a href="../pages/login-v1.html" class="pc-link" target="_blank">
-                         <span class="pc-micon"> <i data-feather="layers"></i></span>
-                         <span class="pc-mtext">Receipt</span>
-                     </a>
-                 </li>
-
-                 <li class="pc-item pc-hasmenu">
-                     <a href="../pages/login-v1.html" class="pc-link" target="_blank">
-                         <span class="pc-micon"> <i data-feather="codepen"></i></span>
-                         <span class="pc-mtext">Payment</span>
-                     </a>
-                 </li>
-
-                 <li class="pc-item pc-caption">
-                     <label>Pages</label>
-                     <i data-feather="monitor"></i>
-                 </li>
-                 <li class="pc-item pc-hasmenu">
-                     <a href="../pages/login-v1.html" class="pc-link" target="_blank">
-                         <span class="pc-micon"> <i data-feather="lock"></i></span>
-                         <span class="pc-mtext">Login</span>
-                     </a>
-                 </li>
-                 <li class="pc-item pc-hasmenu">
-                     <a href="../pages/register-v1.html" class="pc-link" target="_blank">
-                         <span class="pc-micon"> <i data-feather="user-plus"></i></span>
-                         <span class="pc-mtext">Register</span>
-                     </a>
-                 </li>
-                 <li class="pc-item pc-caption">
-                     <label>Other</label>
-                     <i data-feather="sidebar"></i>
-                 </li>
-                 <li class="pc-item pc-hasmenu">
-                     <a href="#!" class="pc-link"><span class="pc-micon"> <i data-feather="align-right"></i>
-                         </span><span class="pc-mtext">Menu levels</span><span class="pc-arrow"><i
-                                 class="ti ti-chevron-right"></i></span></a>
-                     <ul class="pc-submenu">
-                         <li class="pc-item"><a class="pc-link" href="#!">Level 2.1</a></li>
-                         <li class="pc-item pc-hasmenu">
-                             <a href="#!" class="pc-link">Level 2.2<span class="pc-arrow"><i
-                                         class="ti ti-chevron-right"></i></span></a>
-                             <ul class="pc-submenu">
-                                 <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
-                                 <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
-                                 <li class="pc-item pc-hasmenu">
-                                     <a href="#!" class="pc-link">Level 3.3<span class="pc-arrow"><i
-                                                 class="ti ti-chevron-right"></i></span></a>
-                                     <ul class="pc-submenu">
-                                         <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
-                                         <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
-                                     </ul>
-                                 </li>
-                             </ul>
-                         </li>
-                         <li class="pc-item pc-hasmenu">
-                             <a href="#!" class="pc-link">Level 2.3<span class="pc-arrow"><i
-                                         class="ti ti-chevron-right"></i></span></a>
-                             <ul class="pc-submenu">
-                                 <li class="pc-item"><a class="pc-link" href="#!">Level 3.1</a></li>
-                                 <li class="pc-item"><a class="pc-link" href="#!">Level 3.2</a></li>
-                                 <li class="pc-item pc-hasmenu">
-                                     <a href="#!" class="pc-link">Level 3.3<span class="pc-arrow"><i
-                                                 class="ti ti-chevron-right"></i></span></a>
-                                     <ul class="pc-submenu">
-                                         <li class="pc-item"><a class="pc-link" href="#!">Level 4.1</a></li>
-                                         <li class="pc-item"><a class="pc-link" href="#!">Level 4.2</a></li>
-                                     </ul>
-                                 </li>
-                             </ul>
-                         </li>
-                     </ul>
-                 </li>
-                 <li class="pc-item">
-                     <a href="../other/sample-page.html" class="pc-link">
-                         <span class="pc-micon">
-                             <i data-feather="sidebar"></i>
-                         </span>
-                         <span class="pc-mtext">Sample page</span>
-                     </a>
-                 </li>
-             </ul>
-         </div>
-     </div>
- </nav>
- <!-- [ Sidebar Menu ] end -->
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>DASHMIN</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Jhon Doe</h6>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="button.html" class="dropdown-item">Buttons</a>
+                            <a href="typography.html" class="dropdown-item">Typography</a>
+                            <a href="element.html" class="dropdown-item">Other Elements</a>
+                        </div>
+                    </div>
+                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="signin.html" class="dropdown-item">Sign In</a>
+                            <a href="signup.html" class="dropdown-item">Sign Up</a>
+                            <a href="404.html" class="dropdown-item">404 Error</a>
+                            <a href="blank.html" class="dropdown-item">Blank Page</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->

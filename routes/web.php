@@ -6,7 +6,7 @@ use App\Http\Controllers\books\BookController;
 
 Route::get('/', function () {
      return view('index');
-    //return view('welcome');
+    // return view('welcome');
 });
 
 // Route::get('/booklist', [BookController::class, 'show'])->name('booklist');

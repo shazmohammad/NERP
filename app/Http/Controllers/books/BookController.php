@@ -23,6 +23,7 @@ class BookController extends Controller
 
     public function index()
     {
+        // return view('welcome');
         return view('index');
     }
 

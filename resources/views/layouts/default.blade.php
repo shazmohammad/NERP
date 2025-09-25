@@ -1,5 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!-- [Head] start -->
+ @include('layouts.header')
+  <!-- [Head] end -->
+  
+  <!-- [Body] Start -->
+<body>
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
 
 
+        <!-- Sidebar Start -->
+         @include('layouts.menubar')
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+             @include('layouts.topbar')
+            <!-- Navbar End -->
+
+                       @yield('page')         
+
+            <!-- Footer Start -->
+             @include('layouts.footer') 
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+
+
+        <!-- Back to Top -->
+          @include('layouts.backtotop') 
+    </div>
+
+    <!-- JavaScript Libraries -->
+    @include('layouts.footer_js') 
+</body>
+  <!-- [Body] end -->
+
+</html>
+
+
+
+{{-- 
 <!doctype html>
 <html lang="en" data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-direction="ltr" dir="ltr" data-pc-theme="light">
   <!-- [Head] start -->
@@ -45,65 +95,4 @@
   <!-- [Body] end -->
 </html>
 
-
-
-{{-- <!doctype html>
-<html lang="en">
-  <!--begin::Head-->
-    <head>
-@include('layouts.header')
-@yield('css')
-  </head>
-  <!--end::Head-->
-  <!--begin::Body-->
-  <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
-    <!--begin::App Wrapper-->
-    <div class="app-wrapper">
-      <!--begin::Header-->
-      @include('layouts.topbar') 
-      <!--end::Header-->
-      <!--begin::Sidebar-->
-      @include('layouts.menubar')
-      <!--end::Sidebar-->
-      <!--begin::App Main-->
-      <main class="app-main">
-        <!--begin::App Content Header-->
-        <div class="app-content-header">
-          <!--begin::Container-->
-          <div class="container-fluid">
-            <!--begin::Row-->
-            <div class="row">
-              <div class="col-sm-6"><h3 class="mb-0">Dashboard</h3></div>
-              <div class="col-sm-6">
-                <ol class="breadcrumb float-sm-end">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
-                </ol>
-              </div>
-            </div>
-            <!--end::Row-->
-          </div>
-          <!--end::Container-->
-        </div>
-        <!--end::App Content Header-->
-        <!--begin::App Content-->
-        <div class="app-content">
-          <!--begin::Container-->
-    @yield('page')
-          <!--end::Container-->
-        </div>
-        <!--end::App Content-->
-      </main>
-      <!--end::App Main-->
-      <!--begin::Footer-->
-@include('layouts.footer')
-      <!--end::Footer-->
-    </div>
-    <!--end::App Wrapper-->
-    <!--begin::Script-->
-    <!--begin::Third Party Plugin(OverlayScrollbars)-->
-    @yield('script')
-    <!--end::Script-->
-  </body>
-  <!--end::Body-->
-</html> --}}
+ --}}
