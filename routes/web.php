@@ -42,7 +42,7 @@ Route::get('/', function () {
             // Route::prefix('country')->group(function () {
                 Route::get('/', 'show')->name('customer.list');
                 Route::get('/add', 'add')->name('customer.add');
-                // Route::post('/add', 'save')->name('bookadd');
+                Route::post('/add', 'save')->name('customer.add');
                 Route::get('edit/{id}', 'view')->name('customer.edit');
                 // Route::post('edit/{id}', 'update')->name('bookedit');
                 // Route::get('/report', 'printall')->name('bookprint');

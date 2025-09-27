@@ -31,22 +31,24 @@
                         <th scope="col">Address</th>
                         <th scope="col">Address Arabic</th>
                         <th scope="col">Mobile No</th>
-                        <th scope="col">Action</th>
+                        <th scope="col">
+                            <a href="{{ route('customer.add') }}" type="submit" class="btn btn-primary"><i class="fa fa-plus me-2"></i>Add Customer</a>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
-                   @foreach ($cust as $customer)
-            <tr>
-              <th scope="row">{{ $customer ->id }}</th> 
-              <td>{{ $customer ->code }}</td>
-              <td>{{ $customer ->name }}</td>
-              <td>{{ $customer ->arabic_name }}</td>
-              <td>{{ $customer ->address }}</td>
-              <td>{{ $customer ->arabic_address }}</td>
-              <td>{{ $customer ->mobile_no }}</td>
-              <td><a href="{{ route('customer.edit',['id' => $customer->id]) }}">Edit</a></td>
-            </tr>
-          @endforeach
+                    @foreach ($cust as $customer)
+                        <tr>
+                            <th scope="row">{{ $customer->id }}</th>
+                            <td>{{ $customer->code }}</td>
+                            <td>{{ $customer->name }}</td>
+                            <td>{{ $customer->arabic_name }}</td>
+                            <td>{{ $customer->address }}</td>
+                            <td>{{ $customer->arabic_address }}</td>
+                            <td>{{ $customer->mobile_no }}</td>
+                            <td><a href="{{ route('customer.edit', ['id' => $customer->id]) }}">Edit</a></td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

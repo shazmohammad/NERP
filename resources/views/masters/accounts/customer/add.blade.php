@@ -17,10 +17,20 @@
             <div class="col-sm-12 col-xl-12">
                 <div class="bg-light rounded h-100 p-4">
 
-                    <h6 class="mb-4">Horizontal Form</h6>
-                    <form action="POST" id="frm-customer">
 
-                        <h6 class="mb-4">Basic Navs & Tabs</h6>
+
+                    <form action="{{ route('customer.add') }}" method="POST" id="frm-customer" name="customer_form">
+                        @csrf
+                        <table class="table">
+                            <thead>
+                                <th>
+                                    <h6 class="mb-3"">Add New Customer</h6>
+                                </th>
+                                <th>
+                                    <button type="submit" class="btn btn-primary"><i class="fa fa-save me-2"></i>Save Customer</button>
+                                </th>
+                            </thead>
+                        </table>
 
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -41,75 +51,102 @@
 
                                 <div class="row mb-3">
                                     <label for="inputcode" class="col-sm-2 col-form-label">Code</label>
-                                    <div class="col-sm-10">
-                                        <input type="text" class="form-control " id="inputcode" readonly>
+                                    <div class="col-sm-5">
+                                        <input type="text" class="form-control " id="inputcode" name="code" readonly
+                                         value="{{ old('code') }}"
+                                         class="@error('code') is-invalid @enderror">
+                                    </div>
+
+                                    <div class="form-check form-switch col">
+                                        <input class="form-check-input" type="checkbox" role="switch" id="status"
+                                            name="status" checked>
+                                        <label class="form-check-label" for="status">Activate</label>
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <label for="inputname" class="col-sm-2 col-form-label">Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputname">
+                                        <input type="text" class="form-control" id="inputname" name="name"
+                                         value="{{ old('name') }}"
+                                         class="@error('name') is-invalid @enderror">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <label for="inputnamearb" class="col-sm-2 col-form-label">Name Arabic</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="inputnamearb">
+                                        <input type="text" class="form-control" id="inputnamearb" name="namearabic"
+                                         value="{{ old('namearabic') }}"
+                                         class="@error('namearabic') is-invalid @enderror">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <label for="address" class="col-sm-2 col-form-label">Address</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="address">
+                                        <input type="text" class="form-control" id="address" name="address"
+                                         value="{{ old('address') }}"
+                                         class="@error('address') is-invalid @enderror">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <label for="addressarb" class="col-sm-2 col-form-label">Address Arabic</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="addressarb">
+                                        <input type="text" class="form-control" id="addressarb" name="addressarabic"
+                                         value="{{ old('addressarb') }}"
+                                         class="@error('addressarb') is-invalid @enderror">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <label for="mobileno" class="col-sm-2 col-form-label">Mobile No</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="mobileno">
+                                        <input type="text" class="form-control" id="mobileno" name="mobileno"
+                                         value="{{ old('mobileno') }}"
+                                         class="@error('mobileno') is-invalid @enderror">
                                     </div>
                                 </div>
 
 
                             </div>
-                            <div class="tab-pane fade" id="nav-address" role="tabpanel" aria-labelledby="nav-address-tab">
+                            <div class="tab-pane fade" id="nav-address" role="tabpanel"
+                                aria-labelledby="nav-address-tab">
 
                                 <div class="row mb-3">
                                     <label for="selelrname" class="col-sm-2 col-form-label">Seller Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="sellername">
+                                        <input type="text" class="form-control" id="sellername" name="sellername"
+                                         value="{{ old('sellername') }}"
+                                         class="@error('sellername') is-invalid @enderror">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <label for="vatno" class="col-sm-2 col-form-label">VAT No</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="vatno" maxlength="15">
+                                        <input type="text" class="form-control" id="vatno" maxlength="15" name="vatno"
+                                         value="{{ old('vatno') }}"
+                                         class="@error('vatno') is-invalid @enderror">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <label for="crno" class="col-sm-2 col-form-label">CR No</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="crno" maxlength="20">
+                                        <input type="text" class="form-control" id="crno" maxlength="20" name="crno"
+                                         value="{{ old('crno') }}"
+                                         class="@error('crno') is-invalid @enderror">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                                     <div class="col-sm-10">
-                                        <input type="email" class="form-control" id="inputEmail3">
+                                        <input type="email" class="form-control" id="inputEmail3" name="email"
+                                         value="{{ old('email') }}"
+                                         class="@error('email') is-invalid @enderror">
                                     </div>
                                 </div>
 
@@ -124,43 +161,7 @@
                         </div>
 
 
-                        <div class="row mb-3">
-                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3">
-                            </div>
-                        </div>
-                        <fieldset class="row mb-3">
-                            <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                        value="option1" checked>
-                                    <label class="form-check-label" for="gridRadios1">
-                                        First radio
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                        value="option2">
-                                    <label class="form-check-label" for="gridRadios2">
-                                        Second radio
-                                    </label>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <div class="row mb-3">
-                            <legend class="col-form-label col-sm-2 pt-0">Checkbox</legend>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                    <label class="form-check-label" for="gridCheck1">
-                                        Check me out
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Sign in</button>
+
                     </form>
                 </div>
             </div>

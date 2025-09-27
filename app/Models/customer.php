@@ -17,5 +17,9 @@ class customer extends Model
         'arabic_address',
         'mobile_no',
         'action',
+        'seller_name',
+        'vat_no',
+        'cr_no',
+        'email',
     ];
 }
