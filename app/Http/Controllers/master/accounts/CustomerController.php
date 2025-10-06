@@ -43,17 +43,14 @@ class CustomerController extends Controller
             $this->_status="in_active";
         }
 
-   print_r($request); 
+   print_r($request->status); 
 
-     $_code=$this->generateNextInvoiceNo();
-
-   print_r($this->_code);
-   die();
-
-         $_code = DB::transaction(function () use ($request) { 
- 
+   
+         $_code = DB::transaction(function () use ($request) {  
    $_acc_id = $this->_add_accounts_table($request);
    
+   print_r("acc id is".$_acc_id);
+
        Log::info($request->all());
        $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -83,27 +80,32 @@ class CustomerController extends Controller
         $book->save();
  
          });
+     print_r ("customer saved !");
+     die();
      
         return redirect(route('customer.list',absolute:false));
     }
 
    private  function generateNextInvoiceNo()
     {
-
+        print_r("generation started ! ");
         $lastDoc = Accounts::orderBy('id', 'desc')->first();
-
+        print_r("last doc is " .$lastDoc);
+  
         if ($lastDoc) {
             // Extract the numeric part and increment
             $lastNumber = intval(substr($lastDoc->number, 3));
+            $length = 4;
             $newNumber = $lastNumber + 1;
         } else {
             $newNumber = 1;
         }
 
         // Format the document number (e.g., DOC000123)
-        $documentNumber = 'DOC' . str_pad($newNumber, 6, '0', STR_PAD_LEFT);
+        $documentNumber = 'C' . str_pad($newNumber, $length, '0', STR_PAD_LEFT);
 
-
+ print_r(" document no is " .$documentNumber);
+ 
         // Fetch the last invoice by id
         // $lastid  = Accounts::orderBy('id', 'desc')->first();
 
